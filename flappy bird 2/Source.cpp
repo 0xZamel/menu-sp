@@ -10,31 +10,31 @@
 #include <random>
 #include <iomanip>
 #include <vector>
-
-
 using namespace std;
 using namespace sf;
 
 RenderWindow mainwindow(VideoMode(1700, 800), "Flappy bird");
-//Menu menu(1700, 800);
+
 Event event;
 const float SCREEN_W = mainwindow.getSize().x;
 const float SCREEN_H = mainwindow.getSize().y;
 Font MainFont;
 Font FontTheme;
 Font fontrate;
-
 void setFonts() {
 
 FontTheme.loadFromFile("arial.TTF");
 fontrate.loadFromFile("pixelmix_bold.ttf");
 MainFont.loadFromFile("pixelmix.ttf");
 }
+void setAssets();
+void transition();
+void draw();
+void animation();
 
 
 float speed = 4.0f;
 int cnt = 0;
-
 
 struct Flash
 {
@@ -65,7 +65,6 @@ struct Flash
         mainwindow.draw(TheFlash);
     }
 } Flash;
-
 
 struct Bird
 {
@@ -199,7 +198,6 @@ struct Bird
     }
 } Bird;
 
-
 struct credits
 {
     
@@ -268,11 +266,13 @@ struct credits
 
     void draw()
     {
-        //mainwindow.draw(black);
-        for (int i = 0; i < 7; i++)
-        {
-            mainwindow.draw(text[i]);
-            mainwindow.draw(birds[i]);
+        if (cnt == 3) {
+            //mainwindow.draw(black);
+            for (int i = 0; i < 7; i++)
+            {
+                mainwindow.draw(text[i]);
+                mainwindow.draw(birds[i]);
+            }
         }
     }
     void move()
@@ -333,11 +333,11 @@ struct credits
 
     }
 }credits;
-
 int current = 0;
 
 struct Menu 
 {
+    RectangleShape darkWindow;
     Texture Rate;
     Sprite SpriteRate;
 
@@ -372,18 +372,42 @@ struct Menu
     Texture returnback;
     Sprite SpriteReturnBack;
    
-    //rectangle
-   // RectangleShape rectangle(Vector2f(70.0f, 25.0f));
+
     RectangleShape rectangle;
     //triangle
     CircleShape triangle;
 
 
+    //themes for bird
 
-    
+    Texture birdthemes;
+    Sprite SpriteBIRDthemes;
 
+
+    RectangleShape rectanglebirdthemes;
+  
+    Texture birdtheme;
+    Sprite Birdtheme;
+ 
     void set() {
+        RectangleShape dar(Vector2f(SCREEN_W, SCREEN_H));
+        darkWindow = dar;
+        darkWindow.setFillColor(Color(0, 0, 0, 200));
+            
+        RectangleShape rectanglebirdthemes1(Vector2f(200.f, 100.f));
+        rectanglebirdthemes = rectanglebirdthemes1;
+        birdthemes.loadFromFile("btn-play.png");
+        SpriteBIRDthemes.setTexture(birdthemes);
+        SpriteBIRDthemes.setPosition(Vector2f(1100, 550));
+        SpriteBIRDthemes.setScale(1.5f, 1.5f);
+        rectanglebirdthemes.setPosition(Vector2f(1120, 560));
+        rectanglebirdthemes.setFillColor(Color::White);
+        rectanglebirdthemes.setScale(0.5f, 0.65f);
 
+        birdtheme.loadFromFile("bird-02.png");
+        Birdtheme.setTexture(birdtheme);
+        Birdtheme.setPosition(Vector2f(1145, 568));
+        Birdtheme.setScale(0.9f, 0.9f);
         Bc1.loadFromFile("land.png");
         for (int i = 0; i < 2; ++i)
         {
@@ -461,6 +485,22 @@ struct Menu
                 float nextX = MainBackGrounds[(i + 1) % 2].getPosition().x + MainBackGrounds[(i + 1) % 2].getGlobalBounds().width;
                 MainBackGrounds[i].setPosition(Vector2f(nextX - 5, 670));
             }
+        }
+    }
+    void draw() {
+        mainwindow.draw(menu.SpriteMainMenu);
+        if (cnt == 0) {
+            mainwindow.draw(Bird.Bird);
+            mainwindow.draw(menu.SpriteTitle);
+            mainwindow.draw(menu.btnplay);
+            mainwindow.draw(menu.SpriteTheme);
+            mainwindow.draw(menu.SpriteRate);
+            mainwindow.draw(menu.RectangleRate);
+            mainwindow.draw(menu.textrate);
+            mainwindow.draw(menu.SpriteBIRDthemes);
+            mainwindow.draw(menu.rectanglebirdthemes);
+            mainwindow.draw(menu.Birdtheme);
+
         }
     }
 
@@ -541,181 +581,10 @@ struct levels
     
     }
 
-}level;
-
-int main()
-{
-    menu.set();
-    Bird.Constructor(2, 500, 350);
-    mainwindow.setFramerateLimit(60);
-    level.set();
-
-    setFonts();
-    credits.set();
-
-    Texture theme1;
-    theme1.loadFromFile("Classic.png");
-    Sprite SpriteTheme1;
-    SpriteTheme1.setTexture(theme1);
-    SpriteTheme1.setPosition(Vector2f(400, 40));
-    SpriteTheme1.setScale(0.82f, 0.6f);
-
-    Texture theme2;
-    theme2.loadFromFile("London.png");
-    Sprite SpriteTheme2;
-    SpriteTheme2.setTexture(theme2);
-    SpriteTheme2.setPosition(Vector2f(800, 40));
-    SpriteTheme2.setScale(0.82f, 0.6f);
-
-    Texture theme3;
-    theme3.loadFromFile("Shanghai.png");
-    Sprite SpriteTheme3;
-    SpriteTheme3.setTexture(theme3);
-    SpriteTheme3.setPosition(Vector2f(400, 350));
-    SpriteTheme3.setScale(0.82f, 0.6f);
-
-
-    Texture theme4;
-    theme4.loadFromFile("Tokyo.png");
-    Sprite SpriteTheme4;
-    SpriteTheme4.setTexture(theme4);
-    SpriteTheme4.setPosition(Vector2f(800, 350));
-    SpriteTheme4.setScale(0.82f, 0.6f);
-
-    RectangleShape titleBar(Vector2f(822, 40));
-    titleBar.setFillColor(Color::Black);
-    titleBar.setPosition(400, 0);
-    Text titleText("Choose a Theme", FontTheme, 20);
-    titleText.setFillColor(Color::White);
-    titleText.setPosition(100, 10); // Adjust as needed
-
-    // Calculate the centered position for the text
-    float textWidth = titleText.getGlobalBounds().width;
-    // Set the centered position for the text
-    titleText.setPosition(750, 10); // Adjusted for vertical centering
-    
-
-
-   
-    //themes for bird
-
-    Texture birdthemes;
-    birdthemes.loadFromFile("btn-play.png");
-    Sprite SpriteBIRDthemes;
-    SpriteBIRDthemes.setTexture(birdthemes);
-    SpriteBIRDthemes.setPosition(Vector2f(1100, 550));
-    SpriteBIRDthemes.setScale(1.5f, 1.5f);
-
-    RectangleShape rectanglebirdthemes(Vector2f(200.f, 100.f));
-    rectanglebirdthemes.setPosition(Vector2f(1120, 560));
-    rectanglebirdthemes.setFillColor(Color::White);
-    rectanglebirdthemes.setScale(0.5f, 0.65f);
-
-    Texture birdtheme;
-    birdtheme.loadFromFile("bird-02.png");
-    Sprite Birdtheme;
-    Birdtheme.setTexture(birdtheme);
-    Birdtheme.setPosition(Vector2f(1145, 568));
-    Birdtheme.setScale(0.9f, 0.9f);
-    
-
-    while (mainwindow.isOpen())
-    {
-        Event event;
-        while (mainwindow.pollEvent(event))
+    void draw() {
+        if (cnt == 1)
         {
-            if (event.type == Event::Closed)
-            {
-                mainwindow.close();
-            }
-
-            //button press
-            if (Mouse::isButtonPressed(Mouse::Left) && cnt == 0)
-            {
-                Vector2i mousePos = Mouse::getPosition(mainwindow);
-                if (mousePos.x > 500 && mousePos.x < 740 && mousePos.y>550 && mousePos.y < 790)
-                {
-                    cnt = 1;
-                }
-
-            }
-            //themes
-            if (Mouse::isButtonPressed(Mouse::Left) && cnt ==0)
-            {
-                Vector2i mousePos = Mouse::getPosition(mainwindow);
-                if (mousePos.x > 900 && mousePos.x < 1150 && mousePos.y>550 && mousePos.y < 790)
-                {
-                    cnt = 2;
-                }
-
-            }
-            //credits
-            if (Mouse::isButtonPressed(Mouse::Left) && cnt == 0 )
-            {
-                Vector2i mousePos = Mouse::getPosition(mainwindow);
-                if (mousePos.x > 700 && mousePos.x < 900 && mousePos.y>550 && mousePos.y < 790)
-                {
-                    cnt = 3;
-                }
-
-            }
-
-            // Check for mouse click events
-            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
-            {
-                Vector2i mousePos = Mouse::getPosition(mainwindow);
-
-                // Check if the return back sprite is clicked
-                if (cnt == 1 && mousePos.x > 5 && mousePos.x < 25 + menu.SpriteReturnBack.getGlobalBounds().width &&
-                    mousePos.y > 5 && mousePos.y < 25 + menu.SpriteReturnBack.getGlobalBounds().height)
-                {
-                    // Reset cnt to return to the first screen
-                    cnt = 0;
-                }
-                if (cnt == 2 && mousePos.x > 5 && mousePos.x < 25 + menu.SpriteReturnBack.getGlobalBounds().width &&
-                    mousePos.y > 5 && mousePos.y < 25 + menu.SpriteReturnBack.getGlobalBounds().height)
-                {
-                    // Reset cnt to return to the first screen
-                    cnt = 0;
-                }
-            }
-
-            
-                
-            
            
-        }
-        menu.moveLands();
-        
-
-        
-     
-
-
-        if (cnt == 3) {
-            credits.move();
-            credits.wingMove();
-        }
-        //MainBirds.animate();
-        Bird.Animate();
-        mainwindow.clear();
-        mainwindow.draw(menu.SpriteMainMenu);
-        if (cnt == 0) {
-            mainwindow.draw(Bird.Bird);
-           // MainBirds.draw(mainwindow);
-            mainwindow.draw(menu.SpriteTitle);
-            mainwindow.draw(menu.btnplay);
-            mainwindow.draw(menu.SpriteTheme);
-            mainwindow.draw(menu.SpriteRate);
-            mainwindow.draw(menu.RectangleRate);
-            mainwindow.draw(menu.textrate);
-            mainwindow.draw(SpriteBIRDthemes);
-            mainwindow.draw(rectanglebirdthemes);
-            mainwindow.draw(Birdtheme);
-            //cout << menu.RectangleRate.getPosition().x<<"      ";
-        }
-        if (cnt == 1) {
-          //  mainwindow.draw(menu.SpriteMainMenu);
             mainwindow.draw(menu.SpriteReturnBack);
             mainwindow.draw(menu.rectangle);
             mainwindow.draw(menu.triangle);
@@ -726,54 +595,189 @@ int main()
             mainwindow.draw(level.rectangle2);
             mainwindow.draw(level.rectangle3);
             mainwindow.draw(level.text);
-            //cout << level.text.getPosition().y << "      ";
-
             mainwindow.draw(level.text2);
             mainwindow.draw(level.text3);
-
             for (int i = 0; i < 2; ++i)
             {
                 mainwindow.draw(menu.MainBackGrounds[i]);
             }
-
         }
+    }
 
-        else  if (cnt == 2) {
-            mainwindow.draw(menu.bgdark);
+}level;
+struct themes 
+{
+    Texture theme1;
+
+    Sprite SpriteTheme1;
+  
+    Texture theme2;
+
+    Sprite SpriteTheme2;
+
+
+    Texture theme3;
+   
+    Sprite SpriteTheme3;
+  
+
+    RectangleShape titleBar;
+    Texture theme4;
+    Text titleText;
+    Sprite SpriteTheme4;
+    void set() 
+    {
+        Text titleText1("Choose a Theme", FontTheme, 20);
+        titleText = titleText1;
+        theme1.loadFromFile("Classic.png");
+        SpriteTheme1.setTexture(theme1);
+        SpriteTheme1.setPosition(Vector2f(400, 40));
+        SpriteTheme1.setScale(0.82f, 0.6f);
+
+        theme2.loadFromFile("London.png");
+        SpriteTheme2.setTexture(theme2);
+        SpriteTheme2.setPosition(Vector2f(800, 40));
+        SpriteTheme2.setScale(0.82f, 0.6f);
+        theme3.loadFromFile("Shanghai.png");
+        SpriteTheme3.setTexture(theme3);
+        SpriteTheme3.setPosition(Vector2f(400, 350));
+        SpriteTheme3.setScale(0.82f, 0.6f);
+    theme4.loadFromFile("Tokyo.png");
+    SpriteTheme4.setTexture(theme4);
+    SpriteTheme4.setPosition(Vector2f(800, 350));
+    SpriteTheme4.setScale(0.82f, 0.6f);
+
+    RectangleShape titleBar1(Vector2f(822, 40));
+    titleBar = titleBar1;
+    titleBar.setFillColor(Color::Black);
+    titleBar.setPosition(400, 0);
+    
+    titleText.setFillColor(Color::White);
+    titleText.setPosition(100, 10); // Adjust as needed
+
+    // Calculate the centered position for the text
+    float textWidth = titleText.getGlobalBounds().width;
+    // Set the centered position for the text
+    titleText.setPosition(750, 10); // Adjusted for vertical centering
+    }
+    void draw() {
+        if (cnt == 2)
+        {
+
             mainwindow.draw(menu.SpriteReturnBack);
             mainwindow.draw(menu.rectangle);
             mainwindow.draw(menu.triangle);
-            mainwindow.draw(SpriteTheme1);
-            mainwindow.draw(SpriteTheme2);
-            mainwindow.draw(SpriteTheme3);
-            mainwindow.draw(SpriteTheme4);
-            mainwindow.draw(titleBar);
-            mainwindow.draw(titleText);
-
-            for (int i = 0; i < 2; ++i)
-            {
-
-                //mainwindow.draw(darkbackgrounds[i]);
-            }
+            mainwindow.draw(menu.darkWindow);
+            mainwindow.draw(theme.SpriteTheme1);
+            mainwindow.draw(theme.SpriteTheme2);
+            mainwindow.draw(theme.SpriteTheme3);
+            mainwindow.draw(theme.SpriteTheme4);
+            mainwindow.draw(theme.titleBar);
+            mainwindow.draw(theme.titleText);      
         }
-        if (cnt == 0) 
+    }
+
+}theme;
+
+int main()
+{
+    setAssets();
+    while (mainwindow.isOpen())
+    {
+        while (mainwindow.pollEvent(event))
         {
-            for (int i = 0; i < 2; ++i)
-            {
-                mainwindow.draw(menu.MainBackGrounds[i]);
-            }
+            transition();
         }
-
-       // mainwindow.draw(credits.text[6]);
-
-        //menu.draw(mainwindow);
-        if (cnt == 3) {
-            credits.draw();
-            
-        }
-        mainwindow.display();
-
+        animation();
+        draw();
     }
     return 0;
 }
 
+void setAssets() {
+
+    menu.set();
+    Bird.Constructor(2, 500, 350);
+    mainwindow.setFramerateLimit(60);
+    level.set();
+    setFonts();
+    credits.set();
+    theme.set();
+}
+void draw() {
+   
+    mainwindow.clear();
+    mainwindow.draw(menu.SpriteMainMenu);
+
+    menu.draw();
+    level.draw();
+    theme.draw();
+    for (int i = 0; i < 2; ++i)
+    {
+        mainwindow.draw(menu.MainBackGrounds[i]);
+    }
+    credits.draw();
+    if (cnt != 0)
+        mainwindow.draw(menu.SpriteReturnBack);
+    mainwindow.display();
+}
+void transition() {
+    if (event.type == Event::Closed)
+    {
+        mainwindow.close();
+    }
+
+    //button press
+    if (Mouse::isButtonPressed(Mouse::Left) && cnt == 0)
+    {
+        Vector2i mousePos = Mouse::getPosition(mainwindow);
+        if (mousePos.x > 500 && mousePos.x < 740 && mousePos.y>550 && mousePos.y < 790)
+        {
+            cnt = 1;
+        }
+
+    }
+    //themes
+    if (Mouse::isButtonPressed(Mouse::Left) && cnt == 0)
+    {
+        Vector2i mousePos = Mouse::getPosition(mainwindow);
+        if (mousePos.x > 900 && mousePos.x < 1150 && mousePos.y>550 && mousePos.y < 790)
+        {
+            cnt = 2;
+        }
+
+    }
+    //credits
+    if (Mouse::isButtonPressed(Mouse::Left) && cnt == 0)
+    {
+        Vector2i mousePos = Mouse::getPosition(mainwindow);
+        if (mousePos.x > 700 && mousePos.x < 900 && mousePos.y>550 && mousePos.y < 790)
+        {
+            cnt = 3;
+        }
+
+    }
+
+    // Check for mouse click events
+    if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
+    {
+        Vector2i mousePos = Mouse::getPosition(mainwindow);
+
+        // Check if the return back sprite is clicked
+     
+        if (cnt != 0 && mousePos.x > 5 && mousePos.x < 25 + menu.SpriteReturnBack.getGlobalBounds().width &&
+            mousePos.y > 5 && mousePos.y < 25 + menu.SpriteReturnBack.getGlobalBounds().height)
+        {
+            // Reset cnt to return to the first screen
+            cnt = 0;
+        }
+    }
+}
+void animation() {
+    Bird.Animate();
+    menu.moveLands();
+    if (cnt == 3) {
+        credits.move();
+        credits.wingMove();
+    }
+}
