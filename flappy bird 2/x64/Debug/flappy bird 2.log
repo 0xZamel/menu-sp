@@ -1,45 +1,121 @@
 ﻿  Source.cpp
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,44): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,44): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,44): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,44): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,44): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,22): warning C4244: 'initializing': conversion from 'T' to 'const float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,22): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,22): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,22): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(19,22): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,44): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,44): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,44): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,44): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,44): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,22): warning C4244: 'initializing': conversion from 'T' to 'const float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,22): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,22): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,22): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(20,22): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         and
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:             T=float
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,79): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         with
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:             T=unsigned int
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         and
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         [
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:             T=float
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(47,55): warning C4244:         ]
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(102,58): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(140,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(148,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(232,36): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(232,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,40): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,40): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,40): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,40): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,40): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,22): warning C4244: 'initializing': conversion from 'T' to 'const float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,22): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,22): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,22): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(35,22): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,40): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,40): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,40): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,40): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,40): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,22): warning C4244: 'initializing': conversion from 'T' to 'const float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,22): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,22): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,22): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(36,22): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         and
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:             T=float
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,71): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         and
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:             T=float
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(67,51): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(107,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(190,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(214,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(214,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(215,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(275,97): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(321,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(329,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(387,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(465,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(465,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(642,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(642,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(655,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(655,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(657,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(657,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(808,37): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(808,32): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(932,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(932,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1025,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1030,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1035,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1040,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1040,31): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1045,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1045,49): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1045,49): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1045,49): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1045,49): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1171,32): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1171,27): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1173,32): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1173,27): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1209,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1209,62): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1209,62): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1209,62): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1209,62): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1210,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1210,62): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1210,62): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1210,62): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1210,62): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1211,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1211,62): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1211,62): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1211,62): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1211,62): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1213,58): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1213,58): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1213,58): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1213,58): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1213,58): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1214,58): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1214,58): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1214,58): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1214,58): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1214,58): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1215,58): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1215,58): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1215,58): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1215,58): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1215,58): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1221,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1221,60): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1221,60): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1221,60): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1221,60): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1222,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1222,60): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1222,60): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1222,60): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1222,60): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1223,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1223,60): warning C4244:         with
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1223,60): warning C4244:         [
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1223,60): warning C4244:             T=unsigned int
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1223,60): warning C4244:         ]
+C:\Users\20109\Documents\GitHub\menu-sp\flappy bird 2\Source.cpp(1430,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   flappy bird 2.vcxproj -> C:\Users\20109\Documents\GitHub\menu-sp\x64\Debug\flappy bird 2.exe
